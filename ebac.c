@@ -135,10 +135,11 @@ int main()// Menu principal vem primeiro
     	printf("Escolha a opção desejada do menu:\n\n");
     	printf("\t1 - Registrar nomes\n");
     	printf("\t2 - Consultar  nomes\n");
-    	printf("\t3 - Deletar  nomes\n\n");//Fim do Menu
+    	printf("\t3 - Deletar  nomes\n");
+    	printf("\t4 - Sair do Sistema\n\n");
     	printf("opção:");
 
-        scanf("%d", &opcao);
+        scanf("%d", &opcao);//Fim do Menu
 
         system("cls");//Limpar Tela
     
@@ -157,6 +158,12 @@ int main()// Menu principal vem primeiro
         case 3:
         deletar();
         break;
+        
+        case 4:
+        printf("Obrigado por utilizar o Sistema!");
+        return 0;
+        break;
+        
         
         
         default:
