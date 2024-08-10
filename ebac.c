@@ -80,7 +80,7 @@ int consulta()//função responsável por consultar os usuários do sistema
         
     if(file == NULL)
     {
-        printf("não foi possível abrir o arquivo, não localizado!. \n");
+        printf("Usuário não identificado! \n");
 	}
 	
     while(fgets(conteudo, 200, file) != NULL)
@@ -103,7 +103,6 @@ int deletar()// função responsável por deletar os usuários do sistema
 	   printf("Digite o CPF do usuário a ser deletado: ");
 	   scanf("%s", cpf);
 	   
-	   remove(cpf);
 	   
 	   FILE *file;
 	   file = fopen(cpf, "r");
@@ -114,6 +113,12 @@ int deletar()// função responsável por deletar os usuários do sistema
 	   	printf("O usuário não se encontra no sistema!.\n");
 	   	system("pause");
     }
+    else
+    {
+    	remove(cpf);
+    	printf("\nO Usuário foi deletado com sucesso!\n\n ");
+	}
+	        system("pause");
    
 	   
 	   
@@ -160,7 +165,7 @@ int main()// Menu principal vem primeiro
         break;
         
         case 4:
-        printf("Obrigado por utilizar o Sistema!");
+        printf("\nObrigado por utilizar o Sistema!\n");
         return 0;
         break;
         
