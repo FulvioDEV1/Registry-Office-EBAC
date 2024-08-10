@@ -80,7 +80,7 @@ int consulta()//função responsável por consultar os usuários do sistema
         
     if(file == NULL)
     {
-        printf("Usuário não identificado! \n");
+        printf("\nUsuário não identificado!\n\n");
 	}
 	
     while(fgets(conteudo, 200, file) != NULL)
@@ -110,8 +110,7 @@ int deletar()// função responsável por deletar os usuários do sistema
 	   
    	if(file == NULL)
     {
-	   	printf("O usuário não se encontra no sistema!.\n");
-	   	system("pause");
+	   	printf("\nO usuário não se encontra no sistema!.\n\n");
     }
     else
     {
