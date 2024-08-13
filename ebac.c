@@ -128,6 +128,24 @@ int main()// Menu principal vem primeiro
 	int opcao=0;//Definindo as variáveis
 	int laco=1;
 	
+	char senhadigitada[]="a";
+	int comparacao;
+	
+	    setlocale(LC_ALL, "Portuguese");
+	    printf("### Cartório da EBAC ###\n\n");
+	    printf("Login de administrador!\n\n");
+	    printf("Digite a sua senha:");
+	    scanf("%s", senhadigitada);
+	    
+	    comparacao = strcmp(senhadigitada, "admin");
+	    
+	if(comparacao == 0)
+{
+	    	
+	
+	    
+	    
+	
 	for(laco=1;laco=1;)
 	{
 		
@@ -176,7 +194,10 @@ int main()// Menu principal vem primeiro
         break;
         
 	}
-
-
+    }
 }
-}//Usando o Switch case
+
+else
+    printf("\n\nSenha incorreta!\n\n");
+    
+    }//Usando o Switch case
